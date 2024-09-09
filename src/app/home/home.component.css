@@ -1,0 +1,14 @@
+.hero {
+    background-image: url('/Holding.png');
+    height: 500px; 
+    background-repeat: no-repeat; 
+   }
+.heroTitle {
+    font-weight: 300;
+    font-size: 70px !important;
+}
+
+.heroText {
+    font-weight: 300;
+    font-size: 40px !important;
+}

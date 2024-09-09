@@ -1,8 +1,8 @@
-export namespace GlobexConstants
+export namespace parasolConstants
 {
     // Class for general global variables.
     export class General    {
-       public static readonly SITE_ID = 'globex-retail-web-ui';
+       public static readonly SITE_ID = 'parasol-retail-web-ui';
        public static readonly USER_ACTIVITY_LIKE = 'like';
        public static readonly USER_ACTIVITY_ADDTOCARD = 'addtocart';
        public static readonly USER_ACTIVITY_VIEWDETAILS = 'viewdetails';

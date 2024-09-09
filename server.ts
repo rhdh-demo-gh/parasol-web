@@ -23,7 +23,7 @@ export function app(): express.Express {
   console.log("Express server side setup is complete....")
   const server = express();
 
-  const distFolder = join(process.cwd(), 'dist/globex-web/browser');
+  const distFolder = join(process.cwd(), 'dist/parasol-web/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
 
@@ -251,7 +251,7 @@ export function app(): express.Express {
     const sessionToken: string = decoded.sid;
     const sessionExpiresAt: number = decoded.exp * 1000;
     sessions.set(sessionToken, new Session(decoded.preferred_username, sessionExpiresAt, accessToken));
-    res.cookie("globex_session_token", sessionToken, { expires: new Date(sessionExpiresAt), sameSite: 'lax' });
+    res.cookie("parasol_session_token", sessionToken, { expires: new Date(sessionExpiresAt), sameSite: 'lax' });
     res.status(200).send({"success": true});
   });
 
@@ -261,7 +261,7 @@ export function app(): express.Express {
       res.status(401).send();
       return;
     }
-    const sessionToken = req.cookies['globex_session_token']
+    const sessionToken = req.cookies['parasol_session_token']
     if (!sessionToken) {
         res.status(401).send();
         return;
@@ -272,7 +272,7 @@ export function app(): express.Express {
 
   // GET CUSTOMER INFO API CALL
   server.get(ANGULR_API_CUSTOMER + '/:custId', (req, res) => {
-    const sessionToken = req.cookies['globex_session_token']
+    const sessionToken = req.cookies['parasol_session_token']
     const custId = req.params.custId;
     if (!validateSession(sessions, sessionToken, custId)) {
       res.status(401).send();
@@ -293,7 +293,7 @@ export function app(): express.Express {
 
   // POST ORDER API CALL
   server.post(ANGULAR_API_ORDER, (req, res) => {
-    const sessionToken = req.cookies['globex_session_token']
+    const sessionToken = req.cookies['parasol_session_token']
     const custId = req.body.customer;
     if (!validateSession(sessions, sessionToken, custId)) {
       res.status(401).send();

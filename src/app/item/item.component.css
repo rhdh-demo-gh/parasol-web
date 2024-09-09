@@ -1,0 +1,10 @@
+.productFeatures {
+    border-bottom: 1px solid rgba(37, 56, 88, .1) ;
+    color: rgba(37, 56, 88, .7);
+    font-size: 12px
+}
+
+.productFeaturesDesc {
+    color: rgba(37, 56, 88, .7);
+    font-size: 12px
+}

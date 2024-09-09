@@ -1,5 +1,5 @@
 {
-  "name": "globex-web",
+  "name": "parasol-web",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,12 +8,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run globex-web:serve-ssr",
-    "serve:ssr": "node dist/globex-web/server/main.js",
-    "prerender": "ng run globex-web:prerender",
+    "dev:ssr": "ng run parasol-web:serve-ssr",
+    "serve:ssr": "node dist/parasol-web/server/main.js",
+    "prerender": "ng run parasol-web:prerender",
     "lint": "ng lint",
-    "prod:docker": "ng build --configuration=production --output-hashing=none && ng run globex-web:server:production --output-hashing=none",
-    "dev:docker": "ng build --configuration=development  --output-hashing=none && ng run globex-web:server:development --output-hashing=none"
+    "prod:docker": "ng build --configuration=production --output-hashing=none && ng run parasol-web:server:production --output-hashing=none",
+    "dev:docker": "ng build --configuration=development  --output-hashing=none && ng run parasol-web:server:development --output-hashing=none"
   },
   "private": true,
   "dependencies": {

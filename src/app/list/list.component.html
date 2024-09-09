@@ -1,9 +1,35 @@
-<div class="container">
+<!-- <div class="container">
 	<app-product-recommendation [pageViewType]="'others'"></app-product-recommendation>
+  </div> -->
+
+
+  <div class="container-fluid bsb-hero-6 bsb-overlay border border-dark" style="--bsb-overlay-opacity: 0.5; --bsb-overlay-bg-color: var(--bs-light-rgb); 
+                background-image: url('../../assets/images/hero-products.png'); height: 200px; ">
+
+    <div class="row justify-content-md-center align-items-center">
+      <div class="col-12 col-md-11 col-xl-10">    
+        <br><br><br>
+        <h2 class="heroProdTitle display-1 text-center text-md-start text-shadow-head fw-bold mb-4">Choose your right fit.</h2>    
+      </div>
+    </div>
+    
   </div>
 
-
-
+  <div  class="border">
+  
+    <div class="p-3">
+      <span class="product-list-title">
+      At Parasol Insurance, we offer a wide range of car insurance plans
+        designed to suit every driver's unique needs and budget. Whether you're seeking
+        essential liability coverage, comprehensive protection, or specialized options like
+        roadside assistance and key replacement, our plans are tailored to provide maximum peace
+        of mind. With flexible policy options, competitive pricing, and innovative features like
+        mileage-based discounts and safe driving rewards, you can easily customize your
+        coverage. Our goal is to ensure that you're protected on the road, no matter what comes
+        your way. Explore our plans and find the perfect fit for your driving lifestyle.
+        View our comprehensive, affordable insurance designed for your peace of mind.
+      </span>
+    </div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <div class="collapse navbar-collapse" id="navbarColor01">
@@ -27,15 +53,11 @@
 </nav>
 
 <!-- {{products | json}} -->
-
-<div class="card">
-  <div class="card-body">
-    <div class="container">
-      <div class="row row-cols-2 row-cols-md-4">
-        <app-item *ngFor="let product of products.products" [product]="product">
-        </app-item>
-      </div>
-    </div>
-
+<div class="container pb-3">
+  <div class="row">
+      <!--CARD HERE-->
+      <app-item *ngFor="let product of products.products" [product]="product">
+      </app-item>
   </div>
+</div>
 </div>

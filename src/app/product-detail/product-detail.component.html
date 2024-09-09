@@ -1,26 +1,38 @@
+<div class="container-fluid bsb-hero-6 bsb-overlay border border-dark" style="--bsb-overlay-opacity: 0.5; --bsb-overlay-bg-color: var(--bs-light-rgb); 
+background-image: url('../../assets/images/hero-product-detail.png'); height: 100px; ">
+</div>
 
 <div class="card" *ngIf="currentProduct">
         <div class="wrapper row">
             <div class="col-md-6">
-                <div class="tab-content">
-                    <img src="../../assets/images/{{currentProduct.itemId}}.jpg" />
-                </div>
+                <br><br>
+                <h3 class="product-title">{{currentProduct.name}}</h3>
+                <h5 class="product-description">{{currentProduct.desc}}</h5>
             </div>
-            <div class="\ col-md-6">
+            <div class="col-md-6">
                 <div class="userLikeBtn">
                     <i *ngIf="!isProductLiked" class="float-right fa fa-heart-o userLikeOff"  (click)="saveUserLike($event, currentProduct)" ></i>
                     <i *ngIf="isProductLiked" class="float-right fa fa-heart userLikeOn" (click)="removeProductLike($event, currentProduct)" ></i>
                   </div>
-                <h3 class="product-title">{{currentProduct.name}}</h3>
-                <br><br>
-                <h5 class="product-description">{{currentProduct.desc}}</h5>
-                <br><br><br>
-                <h4 class="price">Price: <span>{{currentProduct.price | currency}}</span></h4>
-                <div class="action">
-                    <button (click)="addToCart($event, currentProduct)"   class="add-to-cart btn btn-default" type="button">add to cart</button>
-                
+                <div class="tab-content">
+                    <h3>Features</h3>
+                    <h5 class="product-description">{{currentProduct.features}}</h5>
+                    <br><br>
+                    <h3>Benefits</h3>
+                    <h5 class="product-description">{{currentProduct.benefits}}</h5>
                 </div>
+
+                <br><br>
+                <div class="pull-right">
+                    <h4 class="price">Price: <span>{{currentProduct.price | currency}}</span></h4>
+                    <div class="action">
+                        <button (click)="addToCart($event, currentProduct)"   class="add-to-cart btn btn-default" type="button">add to cart</button>
+                    
+                    </div>
+                </div>
+
             </div>
+            
         </div>
 </div>
 

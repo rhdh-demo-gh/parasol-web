@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { ActionInfo, Activity, UserActivityModel, UserInfo } from './models/user-activity.model';
 import {v4 as uuidv4} from 'uuid';
-import { GlobexConstants } from './core/constants/globex.constants';
+import { parasolConstants } from './core/constants/parasol.constants';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { HandleError, HttpErrorHandler } from './http-error-handler.service';
@@ -31,7 +31,7 @@ export class CoolstoreCookiesService {
   }
 
   initialize() {
-    this.cookieService.delete('globex_session_token');
+    this.cookieService.delete('parasol_session_token');
     this.getUserDetailsFromCookie();
   }
 
@@ -78,18 +78,18 @@ export class CoolstoreCookiesService {
 
 
     this.userActivityObj = new UserActivityModel(
-                              GlobexConstants.General.SITE_ID,
+                              parasolConstants.General.SITE_ID,
                               new Activity(
                                 this.userDetailsMap["userId"],
                                 this.route.snapshot.url.toString(),
                                 uuidv4(),
-                                GlobexConstants.General.USER_ACTIVITY_LIKE
+                                parasolConstants.General.USER_ACTIVITY_LIKE
                                 ) ,
                               new UserInfo(
                                 this.userDetailsMap["visitsCount"], //visitsCount
                                 new Date().getTime(), //prevVisitTs
                                 new Date().getTime(), //firstVisitTs
-                                GlobexConstants.General.CAMPAIGN,
+                                parasolConstants.General.CAMPAIGN,
                                 this.userDetailsMap["newVisit"],  //0 for NO, 1 for YES
                                 this.dateToFormattedString() //localTime
                               ),
@@ -147,12 +147,12 @@ export class CoolstoreCookiesService {
   }
 
   resetUser() {
-    this.cookieService.delete('globex_session_token');
+    this.cookieService.delete('parasol_session_token');
   }
 
   getSession() {
-    if (this.cookieService.check('globex_session_token')) {
-      return this.cookieService.get('globex_session_token');
+    if (this.cookieService.check('parasol_session_token')) {
+      return this.cookieService.get('parasol_session_token');
     }
     return null;
   }
