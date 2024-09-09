@@ -23,5 +23,5 @@ export SSO_LOG_LEVEL=2
 
 ## docker
 
-docker build -t quay.io/redhat_pe_workshop/parasol-web:<tag> .
-docker push quay.io/redhat_pe_workshop/parasol-web:<tag> 
+podman build -t quay.io/redhat_pe_workshop/parasol-web:<tag> .
+podman push quay.io/redhat_pe_workshop/parasol-web:<tag> 
