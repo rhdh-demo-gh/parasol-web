@@ -47,7 +47,7 @@ export class ProductDetailComponent implements OnInit {
   getProductDetails() {
     this.coolStoreService.getProductDetailsByIds(this.productIdFromRoute)
     .subscribe(product => {
-      this.currentProduct = product; 
+      this.currentProduct = product[0]; 
       this.setupProductLikes();
       console.log("this.currentProduct ", this.currentProduct)
     } 
