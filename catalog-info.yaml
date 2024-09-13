@@ -26,19 +26,6 @@ metadata:
     - url: https://my-workbench-${{values.component_id}}-ai${{values.cluster}}/notebook/${{values.component_id}}-ai/my-workbench
       title: Workbench Notebook
       icon: web    
-  links:
-    - url: https://devspaces.apps.cluster-785mh.785mh.sandbox2890.opentlc.com/#https://gitlab-gitlab.apps.cluster-785mh.785mh.sandbox2890.opentlc.com/development/chatbot-2
-      title: OpenShift Dev Spaces (VS Code)
-      icon: web
-    - url: https://devspaces.apps.cluster-785mh.785mh.sandbox2890.opentlc.com/#https://gitlab-gitlab.apps.cluster-785mh.785mh.sandbox2890.opentlc.com/development/chatbot-2?che-editor=che-incubator/che-idea/latest
-      title: OpenShift Dev Spaces (JetBrains IntelliJ)
-      icon: web
-    - url: https://rhods-dashboard-redhat-ods-applications.apps.cluster-785mh.785mh.sandbox2890.opentlc.com/projects/chatbot-2-ai?section=overview
-      title: RHOAI Data Science Project
-      icon: web
-    - url: https://my-workbench-chatbot-2-ai.apps.cluster-785mh.785mh.sandbox2890.opentlc.com/notebook/chatbot-2-ai/my-workbench
-      title: Workbench Notebook
-      icon: web
 spec:
   type: service
   lifecycle: production
