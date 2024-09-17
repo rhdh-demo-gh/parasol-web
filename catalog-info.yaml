@@ -1,0 +1,27 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: parasol-web
+  description: "Parasol Web Application for the Red Hat PE Workshop"
+  owner: redhat-pe-workshop
+  annotations:
+    github.com/project-slug: redhat-pe-workshop/parasol-web
+    backstage.io/techdocs-ref: url:https://github.com/redhat-pe-workshop/parasol-web
+  tags:
+    - web
+    - application
+    - redhat
+  links:
+    - url: https://redhat.com
+      title: Red Hat Site
+      icon: web
+spec:
+  type: service
+  lifecycle: experimental
+  owner: redhat-pe-workshop
+  system: parasol
+  repository: https://github.com/redhat-pe-workshop/parasol-web
+  dependsOn:
+    - component:default/parasol-store-app
+  consumesApis:
+    - default/parasol-store-app-api
