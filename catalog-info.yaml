@@ -5,12 +5,15 @@ metadata:
   description: "Parasol Web Application for the Red Hat PE Workshop"
   owner: redhat-pe-workshop
   annotations:
+    argocd/app-selector: rhdh.app/name=parasol
+    argocd/instance-name: appsargocd
     github.com/project-slug: redhat-pe-workshop/parasol-web
     backstage.io/techdocs-ref: url:https://github.com/redhat-pe-workshop/parasol-web
   tags:
     - web
     - application
     - redhat
+    - parasol
   links:
     - url: https://redhat.com
       title: Red Hat Site
