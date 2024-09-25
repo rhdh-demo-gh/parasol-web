@@ -1,7 +1,8 @@
 site_name: 'Parasol Web Application'
 
+# The README.md is copied in to docs/ at build time using --legacyCopyReadmeMdToIndexMd
 nav:
-  - Overview: index.md
+  - Overview: README.md
 
 plugins:
   - techdocs-core
