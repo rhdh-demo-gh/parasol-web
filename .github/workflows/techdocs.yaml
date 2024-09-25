@@ -8,6 +8,7 @@ on:
       - "docs/**"
       - "mkdocs.yml"
       - "catalog-info.yaml"
+      - "README.md"
   workflow_dispatch:
 
 jobs:
