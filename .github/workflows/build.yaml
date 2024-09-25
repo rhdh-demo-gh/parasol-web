@@ -24,7 +24,7 @@ jobs:
         id: build-image
         uses: redhat-actions/buildah-build@v2
         with:
-          image: ${{ vars.QUAY_ORGANISATION }}/parasol-web
+          image: ${{ secrets.QUAY_ORGANISATION }}/parasol-web
           tags: latest ${{ github.sha }}
           containerfiles: |
             ./Dockerfile
