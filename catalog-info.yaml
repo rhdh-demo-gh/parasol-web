@@ -22,7 +22,7 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: redhat-pe-workshop
+  owner: group:rhdh-demo-gh/docs-team
   system: parasol
   repository: https://github.com/redhat-pe-workshop/parasol-web
   dependsOn:
