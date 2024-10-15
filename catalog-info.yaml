@@ -16,8 +16,8 @@ metadata:
     - redhat
     - parasol
   links:
-    - url: https://redhat.com
-      title: Red Hat Site
+    - url: https://parasol-web-parasol.apps.cluster-sfkb4.sfkb4.sandbox3121.opentlc.com/
+      title: Production Site
       icon: web
 spec:
   type: service
